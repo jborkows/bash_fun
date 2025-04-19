@@ -18,24 +18,15 @@ jobs:
         run: |
           source ../utils/githubactionshelpers.sh
           stepTitle Working with input arguments expansion
+
           subTitle Naive expansion 
-          echo '```bash' >> $GITHUB_STEP_SUMMARY
-          cat first.sh >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
-          echo '```bash' >> $GITHUB_STEP_SUMMARY
-          bash first.sh foo 'bar zoo' 'ooo  xxx' >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
+          displayFile first.sh
+          evalFunction "first.sh foo 'bar zoo' 'ooo  xxx'"
 
-          echo '```bash' >> $GITHUB_STEP_SUMMARY
-          cat first_all_in_quota.sh >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
-          bash first_all_in_quota.sh foo 'bar zoo' 'ooo  xxx' >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
+          subTitle Naive expansion - adding quotas
+          displayFile first_all_in_quota.sh
+          evalFunction "bash first_all_in_quota.sh foo 'bar zoo' 'ooo  xxx'"
 
-          echo '```bash' >> $GITHUB_STEP_SUMMARY
-          cat fixed.sh >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
-          bash fixed.sh foo 'bar zoo' 'ooo  xxx' >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
+          subTitle Fixed
+          displayFile fixed.sh
+          evalFunction "bash fixed.sh foo 'bar zoo' 'ooo  xxx'"
