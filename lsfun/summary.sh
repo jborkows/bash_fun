@@ -12,5 +12,6 @@ else
 fi
 
 execution "script ls into for loop (uses spaces as separator)" first.sh
+execution "script ls into for loop (replacing IFS)" first_with_ifs.sh
 execution "script using for in with globbing" second.sh
 
