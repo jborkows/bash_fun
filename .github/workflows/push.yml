@@ -21,7 +21,7 @@ jobs:
 
           subTitle Naive expansion 
           displayFile first.sh
-          evalFunction "first.sh foo 'bar zoo' 'ooo  xxx'"
+          evalFunction "bash first.sh foo 'bar zoo' 'ooo  xxx'"
 
           subTitle Naive expansion - adding quotas
           displayFile first_all_in_quota.sh
