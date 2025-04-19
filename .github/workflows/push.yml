@@ -9,6 +9,6 @@ jobs:
         uses: actions/checkout@v4.2.2
 
       - name: ls fun
-        working-directory: ls-fun
+        working-directory: lsfun
         run: |
           bash summary.sh >> SGITHUB_STEP_SUMMARY
