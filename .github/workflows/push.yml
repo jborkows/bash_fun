@@ -9,9 +9,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4.2.2
-      - name: Prepare...
-        run: |
-          source ./utils/githubactionshelpers.sh
       - name: ls fun
         working-directory: lsfun
         run: |
@@ -19,6 +16,7 @@ jobs:
       - name: input arguments
         working-directory: basharguments
         run: |
+          source ../utils/githubactionshelpers.sh
           stepTitle Working with input arguments expansion
           subTitle Naive expansion 
           echo '```bash' >> $GITHUB_STEP_SUMMARY
