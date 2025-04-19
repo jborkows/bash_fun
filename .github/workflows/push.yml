@@ -1,5 +1,5 @@
 name: Bash examples
-run-name: Run bash examples ${{github.ref}}
+run-name: Run bash examples ${{github.sha}}
 on:
   push:
 
