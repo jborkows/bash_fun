@@ -1,0 +1,14 @@
+on:
+  push:
+
+jobs:
+  run-scripts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2
+
+      - name: ls fun
+        working-directory: ls-fun
+        run: |
+          bash summary.sh >> SGITHUB_STEP_SUMMARY
