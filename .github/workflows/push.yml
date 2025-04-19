@@ -27,7 +27,7 @@ jobs:
           cat first_all_in_quota.sh >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
           echo '```bash' >> $GITHUB_STEP_SUMMARY
-          bash first_all_quota.sh foo 'bar zoo' 'ooo  xxx' >> $GITHUB_STEP_SUMMARY
+          bash first_all_in_quota.sh foo 'bar zoo' 'ooo  xxx' >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
 
           cat fixed.sh >> $GITHUB_STEP_SUMMARY
