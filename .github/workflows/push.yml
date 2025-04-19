@@ -17,6 +17,7 @@ jobs:
       - name: input arguments
         working-directory: basharguments
         run: |
+          echo "#" Naive expansion >> $GITHUB_STEP_SUMMARY
           echo '```bash' >> $GITHUB_STEP_SUMMARY
           cat first.sh >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
@@ -24,14 +25,16 @@ jobs:
           bash first.sh foo 'bar zoo' 'ooo  xxx' >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
 
+          echo '```bash' >> $GITHUB_STEP_SUMMARY
           cat first_all_in_quota.sh >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
-          echo '```bash' >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
           bash first_all_in_quota.sh foo 'bar zoo' 'ooo  xxx' >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
 
+          echo '```bash' >> $GITHUB_STEP_SUMMARY
           cat fixed.sh >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
-          echo '```bash' >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
           bash fixed.sh foo 'bar zoo' 'ooo  xxx' >> $GITHUB_STEP_SUMMARY
           echo '```' >> $GITHUB_STEP_SUMMARY
