@@ -26,7 +26,7 @@ function evalFunction() {
 	echo "$*" >> $GITHUB_STEP_SUMMARY
 	displayBlock
 	displayBlock
-	eval "$@">> $GITHUB_STEP_SUMMARY
+	eval "$*">> $GITHUB_STEP_SUMMARY
 	displayBlock
 }
 
