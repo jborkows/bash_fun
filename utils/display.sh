@@ -11,7 +11,7 @@ function isCI() {
 function mainTitle() {
 
 	if isCI; then
-		echo "#"$1
+		echo "#" $1
 	else
 		echo "===================="
 		echo "  $1"
@@ -20,7 +20,7 @@ function mainTitle() {
 }
 function title() {
 	if isCI; then
-		echo "##"$1
+		echo "##" $1
 	else
 		echo "===================="
 		echo "  $1"

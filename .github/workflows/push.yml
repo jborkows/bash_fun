@@ -11,6 +11,4 @@ jobs:
       - name: ls fun
         working-directory: lsfun
         run: |
-          bash summary.sh
-          echo "EE?"
           bash summary.sh >> $GITHUB_STEP_SUMMARY
