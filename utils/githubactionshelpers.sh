@@ -8,11 +8,11 @@ function displayBlock(){
 }
 
 function stepTitle(){
-	echo "#" $1 >> $GITHUB_STEP_SUMMARY
+	echo "#" $* >> $GITHUB_STEP_SUMMARY
 }
 
 function subTitle() {
-	echo "##" $1 >> $GITHUB_STEP_SUMMARY
+	echo "##" $* >> $GITHUB_STEP_SUMMARY
 }
 
 function displayFile() {
@@ -23,7 +23,7 @@ function displayFile() {
 
 function evalFunction() {
 	bashPrefix
-	echo "@*" >> $GITHUB_STEP_SUMMARY
+	echo "$*" >> $GITHUB_STEP_SUMMARY
 	displayBlock
 	displayBlock
 	eval "$@">> $GITHUB_STEP_SUMMARY
