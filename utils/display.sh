@@ -50,7 +50,7 @@ function effect() {
 		echo "--------------------"
 		echo "effect"
 		echo "--------------------"
-		cat "$1"
+		bash "$1"
 	fi
 }
 
