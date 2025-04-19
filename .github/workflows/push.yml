@@ -13,4 +13,4 @@ jobs:
         run: |
           bash summary.sh
           echo "EE?"
-          bash summary.sh >> SGITHUB_STEP_SUMMARY
+          bash summary.sh >> $GITHUB_STEP_SUMMARY
