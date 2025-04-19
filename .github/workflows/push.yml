@@ -11,4 +11,6 @@ jobs:
       - name: ls fun
         working-directory: lsfun
         run: |
-          bash summary.sh >> SGITHUB_OUTPUT
+          bash summary.sh
+          echo "EE?"
+          bash summary.sh >> SGITHUB_STEP_SUMMARY
