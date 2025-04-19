@@ -8,6 +8,7 @@ function isCI() {
 	fi
 }
 
+
 function mainTitle() {
 
 	if isCI; then
