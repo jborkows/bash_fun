@@ -1,4 +1,4 @@
-source ../utils/githubactionshelpers.sh
+source ../utils/display.sh
 stepTitle Working with input arguments expansion
 
 subTitle Naive expansion 

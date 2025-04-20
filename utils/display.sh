@@ -1,62 +1,66 @@
 #!/usr/bin/env bash
-function isCI() {
-	# Check if the script is running in a CI environment
+
+function markdownOn() {
 	if [[ "$CI" == "true" ]]; then
-		return 0 # true
+		return 0 
+	elif [[ "$MARKDOWN_ON" == "true" ]]; then
+		return 0 
 	else
-		return 1 # false
+		return 1 
 	fi
 }
 
-
-function mainTitle() {
-
-	if isCI; then
-		echo "#" $1
-	else
-		echo "===================="
-		echo "  $1"
-		echo "===================="
-	fi
-}
-function title() {
-	if isCI; then
-		echo "##" $1
-	else
-		echo "===================="
-		echo "  $1"
-		echo "===================="
-	fi
-}
-
-function code() {
-	if isCI; then
-		echo '```bash'
-		cat "$1"
-		echo '```'
+function bashPrefix(){
+	if markdownOn; then
+		echo '```bash' 
 	else
 		echo "--------------------"
 		echo "body"
 		echo "--------------------"
-		cat "$1"
 	fi
 }
-
-function effect() {
-	if isCI; then
-		echo '```'
-		bash "$1"
-		echo '```'
+function displayBlock(){
+	if markdownOn; then
+		echo '```' 
 	else
 		echo "--------------------"
-		echo "effect"
+		echo "end"
 		echo "--------------------"
-		bash "$1"
 	fi
 }
 
-function execution(){
-	title "$1"
-	code $2
-	effect $2
+function stepTitle(){
+	if markdownOn; then
+		echo "##" $* 
+	else
+		echo "===================="
+		echo "  $*"
+		echo "===================="
+	fi
 }
+
+function subTitle() {
+	if markdownOn; then
+		echo "###" $* 
+	else
+		echo "--------------------"
+		echo "  $*"
+		echo "--------------------"
+	fi
+}
+
+function displayFile() {
+	bashPrefix
+	cat "$1"  
+	displayBlock
+}
+
+function evalFunction() {
+	bashPrefix
+	echo "$*" 
+	displayBlock
+	displayBlock
+	eval "$*"
+	displayBlock
+}
+

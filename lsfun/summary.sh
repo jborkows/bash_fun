@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ../utils/githubactionshelpers.sh
+source ../utils/display.sh
 stepTitle Playing with ls
 subTitle ls -l
 evalFunction "ls -l ./files"
