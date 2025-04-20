@@ -1,0 +1,3 @@
+jan:1:someone else
+jarek:2:not a politician
+jacek:3:someone different :1
