@@ -50,6 +50,7 @@ function subTitle() {
 }
 
 function displayFile() {
+	echo "$1"
 	bashPrefix
 	cat "$1"  
 	displayBlock

@@ -1,4 +1,4 @@
-.PHONY: lsfun, basharguments,all,md
+.PHONY: lsfun, basharguments,all,md, generate-md
 force:
 lsfun: force
 	@cd lsfun && \
@@ -10,5 +10,5 @@ all: lsfun basharguments
 	@echo ""
 md:
 	@MARKDOWN_ON=true $(MAKE) --no-print-directory all
-aaa:
+generate-md:
 	@bash generate.sh
