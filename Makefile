@@ -1,4 +1,4 @@
-.PHONY: lsfun, basharguments,all
+.PHONY: lsfun, basharguments,all,md
 force:
 lsfun: force
 	@cd lsfun && \
@@ -8,3 +8,7 @@ basharguments: force
 	bash summary.sh
 all: lsfun basharguments
 	@echo ""
+md:
+	@MARKDOWN_ON=true $(MAKE) --no-print-directory all
+aaa:
+	@bash generate.sh
