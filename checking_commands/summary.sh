@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+source ../utils/display.sh
+
+stepTitle Some info for working with commands to check if they are built-in or external
+
+subTitle type command
+evalFunction "type echo"
+
+
+subTitle which command
+evalFunction "which echo"
+
+subTitle more detailed info from type
+evalFunction "type -a echo"
+
+
+subTitle How to get help
+echo "Print help to get help for built-in commands"
+
