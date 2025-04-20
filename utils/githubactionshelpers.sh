@@ -1,32 +1,66 @@
 #!/usr/bin/env bash
 
+function markdownOn() {
+	if [[ "$CI" == "true" ]]; then
+		return 0 
+	elif [[ "$MARKDOWN_ON" == "true" ]]; then
+		return 0 
+	else
+		return 1 
+	fi
+}
+
 function bashPrefix(){
-	echo '```bash' >> $GITHUB_STEP_SUMMARY
+	if markdownOn; then
+		echo '```bash' 
+	else
+		echo "--------------------"
+		echo "body"
+		echo "--------------------"
+	fi
 }
 function displayBlock(){
-	echo '```' >> $GITHUB_STEP_SUMMARY
+	if markdownOn; then
+		echo '```' 
+	else
+		echo "--------------------"
+		echo "end"
+		echo "--------------------"
+	fi
 }
 
 function stepTitle(){
-	echo "#" $* >> $GITHUB_STEP_SUMMARY
+	if markdownOn; then
+		echo "##" $* 
+	else
+		echo "===================="
+		echo "  $*"
+		echo "===================="
+	fi
 }
 
 function subTitle() {
-	echo "##" $* >> $GITHUB_STEP_SUMMARY
+	if markdownOn; then
+		echo "###" $* 
+	else
+		echo "--------------------"
+		echo "  $*"
+		echo "--------------------"
+	fi
 }
 
 function displayFile() {
 	bashPrefix
-	cat "$1" >> $GITHUB_STEP_SUMMARY
+	cat "$1"  
 	displayBlock
 }
 
 function evalFunction() {
 	bashPrefix
-	echo "$*" >> $GITHUB_STEP_SUMMARY
+	echo "$*" 
 	displayBlock
 	displayBlock
-	eval "$*">> $GITHUB_STEP_SUMMARY
+	eval "$*"
 	displayBlock
 }
 

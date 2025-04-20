@@ -10,23 +10,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4.2.2
       - name: ls fun
-        working-directory: lsfun
         run: |
-          bash summary.sh >> $GITHUB_STEP_SUMMARY
+          make lsfun >> $GITHUB_STEP_SUMMARY
       - name: input arguments
-        working-directory: basharguments
         run: |
-          source ../utils/githubactionshelpers.sh
-          stepTitle Working with input arguments expansion
-
-          subTitle Naive expansion 
-          displayFile first.sh
-          evalFunction "bash first.sh foo 'bar zoo' 'ooo  xxx'"
-
-          subTitle Naive expansion - adding quotas
-          displayFile first_all_in_quota.sh
-          evalFunction "bash first_all_in_quota.sh foo 'bar zoo' 'ooo  xxx'"
-
-          subTitle Fixed
-          displayFile fixed.sh
-          evalFunction "bash fixed.sh foo 'bar zoo' 'ooo  xxx'"
+          make basharguments >> $GITHUB_STEP_SUMMARY

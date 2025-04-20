@@ -1,17 +1,18 @@
 #!/usr/bin/env bash
-source ../utils/display.sh
 
-mainTitle "Playing with ls"
-title "ls -l"
-if isCI; then
-	echo '```'
-	ls -l ./files
-	echo '```'
-else
-	ls ./files
-fi
+source ../utils/githubactionshelpers.sh
+stepTitle Playing with ls
+subTitle ls -l
+evalFunction "ls -l ./files"
 
-execution "script ls into for loop (uses spaces as separator)" first.sh
-execution "script ls into for loop (replacing IFS)" first_with_ifs.sh
-execution "script using for in with globbing" second.sh
+subTitle script ls into for loop \(uses spaces as separator\)
+displayFile first.sh
+evalFunction "bash first.sh"
 
+subTitle script ls into for loop \(replacing IFS\)
+displayFile first_with_ifs.sh
+evalFunction "bash first_with_ifs.sh"
+
+subTitle script using for in with globbing
+displayFile second.sh
+evalFunction "bash second.sh"
