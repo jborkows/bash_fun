@@ -23,4 +23,4 @@ aaa
 0.00user 0.00system 0:00.00elapsed 100%CPU (0avgtext+0avgdata 1968maxresident)k
 0inputs+0outputs (0major+81minor)pagefaults 0swaps
 ```
-Order sometimes matters. sudo time uses commands, time sudo uses builtin.
+Order sometimes matters. sudo time uses commands, time sudo uses builtin. Sudo is not a builtin it is a command so it uses commands echo and type, because it is "outside" bash.
