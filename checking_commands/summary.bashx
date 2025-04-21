@@ -17,3 +17,4 @@ evalFunction "type -a echo"
 subTitle How to get help
 echo "Print help to get help for built-in commands"
 
+

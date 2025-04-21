@@ -15,21 +15,30 @@ for dir in */; do
 
     [ -d "$dir" ] || continue
 
-    SUMMARY_SCRIPT="$dir/summary.sh"
-    if [ ! -f "$SUMMARY_SCRIPT" ]; then
-	    echo "Skipping $dir (no summary.sh)"
+    OUTPUT_FILE="$SCRIPT_DIR/${dir}.md"
+
+    SUMMARY_SCRIPT="summary.sh"
+    if [  -f "$dir/$SUMMARY_SCRIPT" ]; then
+	    echo "Running $SUMMARY_SCRIPT in $dir..."
+	    (
+	    cd "$dir"
+	    bash $SUMMARY_SCRIPT > "$OUTPUT_FILE"
+	    )
+
+	    echo "Output saved to $OUTPUT_FILE"
 	    continue
     fi
-
-    OUTPUT_FILE="$SCRIPT_DIR/${dir}.md"
-    echo "Running summary.sh in $dir..."
-
-    (
+    SUMMARY_SCRIPT="summary.bashx"
+    if [  -f "$dir/$SUMMARY_SCRIPT" ]; then
+	    echo "Running $SUMMARY_SCRIPT in $dir..."
+	    (
 	    cd "$dir"
-	    bash summary.sh > "$OUTPUT_FILE"
-    )
+	    bash $SUMMARY_SCRIPT > "$OUTPUT_FILE"
+	    )
 
-    echo "Output saved to $OUTPUT_FILE"
-    echo
+	    echo "Output saved to $OUTPUT_FILE"
+	    continue
+    fi
+    echo "Skipping $dir (no summary.sh nor summary.bashx found)"
 done
 
