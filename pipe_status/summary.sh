@@ -4,11 +4,9 @@ source ../utils/display.sh
 stepTitle Using pipe status
 
 subTitle Basics
-displayFile basic.sh
-evalFunction "bash basic.sh" 
+showAndRunFile basic.sh
 
 
 subTitle Seeing exit codes
-displayFile morefun.sh
-evalFunction "bash morefun.sh" 
+showAndRunFile morefun.sh
 

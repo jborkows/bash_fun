@@ -65,7 +65,7 @@ good
 bad
 ```
 ```bash
-bash  capturing_result_local.sh
+bash capturing_result_local.sh
 ```
 ```
 good: 0
@@ -92,7 +92,7 @@ good
 bad
 ```
 ```bash
-bash  capturing_result_local_correct.sh
+bash capturing_result_local_correct.sh
 ```
 ```
 good: 0

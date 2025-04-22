@@ -4,5 +4,4 @@ source ../utils/display.sh
 stepTitle Using proc to read environment variables
 
 subTitle Using proc
-displayFile basic.sh
-evalFunction "bash basic.sh"
+showAndRunFile basic.sh

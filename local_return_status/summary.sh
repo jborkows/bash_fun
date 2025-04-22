@@ -3,19 +3,15 @@
 source ../utils/display.sh
 stepTitle Playing with return parameter
 subTitle Example
-displayFile example.sh
-evalFunction "bash example.sh"
+showAndRunFile example.sh
 subTitle Capturing return value
-displayFile capturing_result.sh
-evalFunction "bash capturing_result.sh"
+showAndRunFile capturing_result.sh
 
 subTitle Capturing return value into local \(wrong\)
-displayFile capturing_result_local.sh
-evalFunction "bash  capturing_result_local.sh"
+showAndRunFile capturing_result_local.sh
 
 subTitle Capturing return value into local \(fixed\)
-displayFile capturing_result_local_correct.sh
-evalFunction "bash  capturing_result_local_correct.sh"
+showAndRunFile capturing_result_local_correct.sh
 
 
 

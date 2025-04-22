@@ -3,19 +3,15 @@
 source ../utils/display.sh
 stepTitle Playing with parameter expansion
 subTitle patterns
-displayFile first.sh
-evalFunction "bash first.sh"
+showAndRunFile first.sh
 
 
 subTitle replacement
-displayFile replacement.sh
-evalFunction "bash replacement.sh"
+showAndRunFile replacement.sh
 
 subTitle default value
-displayFile defaultvalues.sh
-evalFunction "bash defaultvalues.sh"
+showAndRunFile defaultvalues.sh
 
 
 subTitle lower case/upper case
-displayFile lower_upper_case.sh
-evalFunction "bash lower_upper_case.sh"
+showAndRunFile lower_upper_case.sh

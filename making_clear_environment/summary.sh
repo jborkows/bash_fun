@@ -4,5 +4,4 @@ source ../utils/display.sh
 stepTitle Making clear environment
 
 subTitle Clearing environment 
-displayFile basic.sh
-evalFunction "bash basic.sh"
+showAndRunFile basic.sh

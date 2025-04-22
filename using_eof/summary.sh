@@ -4,6 +4,5 @@ source ../utils/display.sh
 stepTitle Playing with eof
 
 subTitle Using eof
-displayFile basic.sh
-evalFunction "bash basic.sh"
+showAndRunFile basic.sh
 

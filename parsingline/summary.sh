@@ -7,9 +7,7 @@ subTitle original file
 displayFile data.txt
 
 subTitle multiple external commands for each line
-displayFile multiplesubshell.sh
-evalFunction "bash multiplesubshell.sh"
+showAndRunFile multiplesubshell.sh
 
 subTitle single command for each line
-displayFile singlecommand.sh
-evalFunction "bash singlecommand.sh"
+showAndRunFile singlecommand.sh

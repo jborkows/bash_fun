@@ -1,4 +1,4 @@
-## Using expansions
+## Expansions
 ### Basics
 
 ```bash

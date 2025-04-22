@@ -8,14 +8,9 @@ for arg in $*;do
 done
 ```
 ```bash
-bash first.sh foo 'bar zoo' 'ooo  xxx'
+bash first.sh
 ```
 ```
-arg is <foo>
-arg is <bar>
-arg is <zoo>
-arg is <ooo>
-arg is <xxx>
 ```
 ### Naive expansion - adding quotas
 
@@ -26,10 +21,10 @@ for arg in "$*";do
 done
 ```
 ```bash
-bash first_all_in_quota.sh foo 'bar zoo' 'ooo  xxx'
+bash first_all_in_quota.sh
 ```
 ```
-arg is <foo bar zoo ooo  xxx>
+arg is <>
 ```
 ### Fixed
 
@@ -40,10 +35,7 @@ for arg in "$@";do
 done
 ```
 ```bash
-bash fixed.sh foo 'bar zoo' 'ooo  xxx'
+bash fixed.sh
 ```
 ```
-arg is <foo>
-arg is <bar zoo>
-arg is <ooo  xxx>
 ```
