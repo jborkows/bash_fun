@@ -1,5 +1,5 @@
 source ../utils/display.sh
-stepTitle Reading files
+stepTitle Reading files in different ways
 
 subTitle everything in memory then process
 displayFile reading_all_at_once.sh

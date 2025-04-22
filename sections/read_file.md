@@ -1,4 +1,4 @@
-## Reading files
+## Reading files in different ways
 ### everything in memory then process
 reading_all_at_once.sh
 ```bash
@@ -13,9 +13,9 @@ done
 bash reading_all_at_once.sh
 ```
 ```
-18:53:28 First line
-18:53:28 Second line
-18:53:28 Third line
+18:56:44 First line
+18:56:44 Second line
+18:56:44 Third line
 ```
 ### line by line
 reading_line_by_line.sh
@@ -33,9 +33,9 @@ done < <(bash slow_read.sh example.txt)
 bash reading_line_by_line.sh
 ```
 ```
-18:53:29 First line
-18:53:30 Second line
-18:53:31 Third line
+18:56:45 First line
+18:56:46 Second line
+18:56:47 Third line
 ```
 ### line by line - without slow
 reading_line_by_line_normal.sh
@@ -53,7 +53,7 @@ done < <(cat example.txt)
 bash reading_line_by_line_normal.sh
 ```
 ```
-18:53:31 First line
-18:53:31 Second line
-18:53:31 Third line
+18:56:47 First line
+18:56:47 Second line
+18:56:47 Third line
 ```
