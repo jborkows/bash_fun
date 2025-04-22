@@ -12,6 +12,6 @@
 - [Playing with ls](./sections/lsfun.md)
 - [Playing with parameter expansion](./sections/parameters_expansion.md)
 - [Reading and parsing files](./sections/parsingline.md)
-- [Reading files](./sections/read_file.md)
+- [Reading files in different ways](./sections/read_file.md)
 - [Parsing names using regex](./sections/regexpparsing.md)
 - [Playing with eof](./sections/using_eof.md)

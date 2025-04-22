@@ -3,6 +3,8 @@
 source ../utils/display.sh
 
 stepTitle Reading and parsing files
+subTitle original file
+displayFile original.txt
 
 subTitle multiple external commands for each line
 displayFile multiplesubshell.sh
