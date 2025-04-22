@@ -17,6 +17,7 @@ for name in "${orNames[@]}"; do
     echo "Name: $name"
 done
 
+echo In array are ${#names[@]} elements
 echo \* joins array to string
 
 echo Using default separator for "${orNames[*]}"
@@ -37,6 +38,7 @@ or without commas
 Name: one
 Name: two
 Name: three
+In array are 3 elements
 * joins array to string
 Using default separator for one two three
 Using separator , for one,two,three

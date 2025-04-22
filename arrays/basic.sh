@@ -13,6 +13,7 @@ for name in "${orNames[@]}"; do
     echo "Name: $name"
 done
 
+echo In array are ${#names[@]} elements
 echo \* joins array to string
 
 echo Using default separator for "${orNames[*]}"
