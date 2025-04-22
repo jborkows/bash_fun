@@ -1,6 +1,9 @@
 source ../utils/display.sh
 stepTitle Reading files in different ways
 
+displayFile example.txt
+displayFile slow_read.sh
+
 subTitle everything in memory then process
 showAndRunFile reading_all_at_once.sh
 
