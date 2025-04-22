@@ -10,6 +10,7 @@
 - [Warning with globing](./sections/globing_failures.md)
 - [Plaaying with return parameter](./sections/local_return_status.md)
 - [Playing with ls](./sections/lsfun.md)
+- [Mapfile](./sections/mapfile_usage.md)
 - [Playing with parameter expansion](./sections/parameters_expansion.md)
 - [Reading and parsing files](./sections/parsingline.md)
 - [Reading files in different ways](./sections/read_file.md)
