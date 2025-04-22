@@ -50,7 +50,7 @@ function subTitle() {
 }
 
 function displayFile() {
-	echo "$1"
+	echo ""
 	bashPrefix
 	cat "$1"  
 	displayBlock
@@ -65,3 +65,7 @@ function evalFunction() {
 	displayBlock
 }
 
+function showAndRunFile() {
+	displayFile "$1"
+	evalFunction "bash $1"
+}

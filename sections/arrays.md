@@ -1,6 +1,6 @@
 ## Playing with arrays
 ### Using arrays
-basic.sh
+
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail
@@ -46,7 +46,7 @@ Using separator , for array which was , one,,two,,three
 see that in even iterating using @ each argument has comma in it!
 ```
 ### Difference between @ and basic.sh difference.sh summary.sh
-difference.sh
+
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail

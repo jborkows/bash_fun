@@ -1,6 +1,6 @@
 ## Using proc to read environment variables
 ### Using proc
-basic.sh
+
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail

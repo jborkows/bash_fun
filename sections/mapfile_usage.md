@@ -1,6 +1,6 @@
 ## Mapfile
 ### Basic usage
-basic.sh
+
 ```bash
 #!/usr/bin/env bash
 mapfile my_array < data.txt
@@ -18,7 +18,7 @@ bash basic.sh
 >
 ```
 ### Basic usage - trimmed
-basic_trimmed.sh
+
 ```bash
 #!/usr/bin/env bash
 mapfile -t my_array < data.txt
@@ -33,7 +33,7 @@ bash basic_trimmed.sh
 <Third line>
 ```
 ### Limited to 2 lines
-limited.sh
+
 ```bash
 #!/usr/bin/env bash
 mapfile -t -n 2 my_array < data.txt
@@ -47,7 +47,7 @@ bash limited.sh
 <Second line>
 ```
 ### Add callback
-callback.sh
+
 ```bash
 #!/usr/bin/env bash
 my_func() {

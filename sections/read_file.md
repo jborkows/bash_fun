@@ -1,6 +1,6 @@
 ## Reading files in different ways
 ### everything in memory then process
-reading_all_at_once.sh
+
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail
@@ -13,12 +13,12 @@ done
 bash reading_all_at_once.sh
 ```
 ```
-20:48:20 First line
-20:48:20 Second line
-20:48:20 Third line
+21:20:59 First line
+21:20:59 Second line
+21:20:59 Third line
 ```
 ### line by line
-reading_line_by_line.sh
+
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail
@@ -32,12 +32,12 @@ done < <(bash slow_read.sh example.txt)
 bash reading_line_by_line.sh
 ```
 ```
-20:48:21 First line
-20:48:22 Second line
-20:48:23 Third line
+21:21:00 First line
+21:21:01 Second line
+21:21:02 Third line
 ```
 ### line by line - without slow
-reading_line_by_line_normal.sh
+
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail
@@ -56,11 +56,11 @@ done < example.txt
 bash reading_line_by_line_normal.sh
 ```
 ```
-20:48:23 First line
-20:48:23 Second line
-20:48:23 Third line
+21:21:02 First line
+21:21:02 Second line
+21:21:02 Third line
 or
-20:48:23 First line
-20:48:23 Second line
-20:48:23 Third line
+21:21:02 First line
+21:21:02 Second line
+21:21:02 Third line
 ```

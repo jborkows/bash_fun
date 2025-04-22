@@ -1,6 +1,6 @@
 ## Playing with tty
 ### Checking tty
-basic.sh
+
 ```bash
 #!/usr/bin/env bash
 ([[ -t 1 ]] && echo is a tty || echo is not a tty)

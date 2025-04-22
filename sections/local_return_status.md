@@ -1,6 +1,6 @@
 ## Playing with return parameter
 ### Example
-example.sh
+
 ```bash
 #!/usr/bin/env bash
 
@@ -24,7 +24,7 @@ good: 0
 bad: 1
 ```
 ### Capturing return value
-capturing_result.sh
+
 ```bash
 #!/usr/bin/env bash
 
@@ -48,7 +48,7 @@ good: 0
 bad: 1
 ```
 ### Capturing return value into local (wrong)
-capturing_result_local.sh
+
 ```bash
 #!/usr/bin/env bash
 
@@ -72,7 +72,7 @@ good: 0
 bad: 0
 ```
 ### Capturing return value into local (fixed)
-capturing_result_local_correct.sh
+
 ```bash
 #!/usr/bin/env bash
 
