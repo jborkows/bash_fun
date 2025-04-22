@@ -48,7 +48,7 @@ for mdFile in ${SCRIPT_DIR}/sections/*.md; do
 	head -1 "$mdFile" 
 	title=$(head -1 "$mdFile") 	
 	removedNotation=${title##*#}
-	outputs+=("-[$removedNotation](./sections/${mdFile##*/})")
+	outputs+=("-[$removedNotation](./sections/${mdFile##*/})<br>")
 done;
 
 IFS=$'\n' 
