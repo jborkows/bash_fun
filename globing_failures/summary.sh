@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 source ../utils/display.sh
-stepTitle Plaaying with return parameter
+stepTitle Warning with globing
 subTitle Failure...
 displayFile failure.sh
 evalFunction "bash failure.sh"
