@@ -1,2 +1,16 @@
 # Sources:
 - [ysap](https://www.youtube.com/watch?v=KwRow9DdFJ0)
+# Sections
+-[ Playing with arrays](./sections/arrays.md)
+-[ Working with input arguments expansion](./sections/basharguments.md)
+-[ Some info for working with commands to check if they are built-in or external](./sections/checking_commands.md)
+-[ Playing with tty](./sections/checking_the_kind_of_output.md)
+-[ Counting and showing execution of external commands](./sections/counting_commands.md)
+-[ Using () and {} in function definition](./sections/function_definition.md)
+-[ Plaaying with return parameter](./sections/globing_failures.md)
+-[ Plaaying with return parameter](./sections/local_return_status.md)
+-[ Playing with ls](./sections/lsfun.md)
+-[ Playing with parameter expansion](./sections/parameters_expansion.md)
+-[ Reading and parsing files](./sections/parsingline.md)
+-[ Parsing names using regex](./sections/regexpparsing.md)
+-[ Playing with eof](./sections/using_eof.md)
