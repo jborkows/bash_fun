@@ -10,6 +10,7 @@ echo "Script directory: $SCRIPT_DIR"
 echo
 mkdir -p "$SCRIPT_DIR/sections" || true
 
+tasks=()
 for dir in */; do
     # ${var%suffix} removes suffix from $var
     dir="${dir%/}"
@@ -24,7 +25,8 @@ for dir in */; do
 	    (
 	    cd "$dir"
 	    bash $SUMMARY_SCRIPT > "$OUTPUT_FILE"
-	    )
+	    ) &
+	    tasks+=("$!")
 
 	    echo "Output saved to $OUTPUT_FILE"
 	    continue
@@ -35,7 +37,8 @@ for dir in */; do
 	    (
 	    cd "$dir"
 	    bash $SUMMARY_SCRIPT > "$OUTPUT_FILE"
-	    )
+	    ) &
+	    tasks+=("$!")
 
 	    echo "Output saved to $OUTPUT_FILE"
 	    continue
@@ -43,21 +46,16 @@ for dir in */; do
     echo "Skipping $dir (no summary.sh nor summary.bashx found)"
 done
 
-outputs=( )
+wait "${tasks[@]}"
+cat <<EOF > "$SCRIPT_DIR/README.md"
+# Sources:
+- [ysap](https://www.youtube.com/watch?v=KwRow9DdFJ0)
+# Sections
+EOF
 for mdFile in ${SCRIPT_DIR}/sections/*.md; do
 	head -1 "$mdFile" 
 	title=$(head -1 "$mdFile") 	
 	removedNotation=${title##*#}
 	removedNotation=${removedNotation# }
-	outputs+=("- [$removedNotation](./sections/${mdFile##*/})")
+	echo "- [$removedNotation](./sections/${mdFile##*/})" >> "$SCRIPT_DIR/README.md"
 done;
-
-IFS=$'\n' 
-ouputtext="${outputs[*]}"
-IFS=
-cat <<EOF > "$SCRIPT_DIR/README.md"
-# Sources:
-- [ysap](https://www.youtube.com/watch?v=KwRow9DdFJ0)
-# Sections
-$ouputtext
-EOF
