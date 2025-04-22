@@ -1,6 +1,6 @@
 ## Using () and {} in function definition
 ### Using {}
-
+_curly.sh_
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail
@@ -31,7 +31,7 @@ Name: bar
 Name: bar
 ```
 ### Using ()
-
+_using_subshell.sh_
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail
@@ -62,7 +62,7 @@ Name: bar
 Name: foo
 ```
 ### Playing with exit codes
-
+_playing_exit_codes.sh_
 ```bash
 #!/usr/bin/env bash
 

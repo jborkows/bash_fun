@@ -1,6 +1,6 @@
 ## Working with input arguments expansion
 ### Naive expansion
-
+_first.sh_
 ```bash
 #!/usr/bin/env bash
 for arg in $*;do
@@ -18,7 +18,7 @@ arg is <ooo>
 arg is <xxx>
 ```
 ### Naive expansion - adding quotas
-
+_first_all_in_quota.sh_
 ```bash
 #!/usr/bin/env bash
 for arg in "$*";do
@@ -32,7 +32,7 @@ bash first_all_in_quota.sh foo 'bar zoo' 'ooo  xxx'
 arg is <foo bar zoo ooo  xxx>
 ```
 ### Fixed
-
+_fixed.sh_
 ```bash
 #!/usr/bin/env bash
 for arg in "$@";do

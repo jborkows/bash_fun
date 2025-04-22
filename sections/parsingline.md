@@ -1,13 +1,13 @@
 ## Reading and parsing files
 ### original file
-
+_data.txt_
 ```bash
 jan:1:someone else
 jarek:2:not a politician
 jacek:3:someone different :1
 ```
 ### multiple external commands for each line
-
+_multiplesubshell.sh_
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail
@@ -28,7 +28,7 @@ bash multiplesubshell.sh
 3: jacek comment: someone different :1
 ```
 ### single command for each line
-
+_singlecommand.sh_
 ```bash
 #!/usr/bin/env bash
 

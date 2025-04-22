@@ -11,7 +11,7 @@ total 0
 -rw-r--r-- 1 jborkows jborkows 0 kwi 19 10:39 d      e
 ```
 ### script ls into for loop (uses spaces as separator)
-
+_first.sh_
 ```bash
 #!/bin/bash
 for f in `ls files`;do  #uses spaces as separator...
@@ -29,7 +29,7 @@ file is d
 file is e
 ```
 ### script ls into for loop (replacing IFS)
-
+_first_with_ifs.sh_
 ```bash
 #!/bin/bash
 IFS=";"
@@ -49,7 +49,7 @@ c
 d      e
 ```
 ### script using for in with globbing
-
+_second.sh_
 ```bash
 #!/usr/bin/env bash 
 # searches for bash based on environment not on path with path like /bin/bash

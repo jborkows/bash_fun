@@ -1,6 +1,6 @@
 ## Making clear environment
 ### Clearing environment
-
+_basic.sh_
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail

@@ -1,6 +1,6 @@
 ## Warning with globing
 ### Failure...
-
+_failure.sh_
 ```bash
 #!/usr/bin/env bash
 # set -euo pipefail #with this the globing will fail it will show wrongly file but it will not show the final message
@@ -16,11 +16,11 @@ echo "Number of files: $i"
 bash failure.sh
 ```
 ```
-File: /tmp/tmp.NwVYg2KqXK/*
+File: /tmp/tmp.w1zVb6BU2U/*
 Number of files: 1
 ```
 ### Fixed...
-
+_fixed.sh_
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail 

@@ -1,6 +1,6 @@
 ## Substrings
 ### From beginning to end
-
+_basic.sh_
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail
@@ -20,7 +20,7 @@ text from 1: ello world
 text from 2: llo world
 ```
 ### From end to beginning
-
+_fromend.sh_
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail

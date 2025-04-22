@@ -1,6 +1,6 @@
 ## Playing with parameter expansion
 ### patterns
-
+_first.sh_
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail
@@ -27,7 +27,7 @@ dirname: /aaa/bbb/ccc
 notSoDirname: 
 ```
 ### replacement
-
+_replacement.sh_
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail
@@ -47,7 +47,7 @@ Replacing...
 Some string was replaced
 ```
 ### default value
-
+_defaultvalues.sh_
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail
@@ -64,7 +64,7 @@ hello
 bar
 ```
 ### lower case/upper case
-
+_lower_upper_case.sh_
 ```bash
 #!/usr/bin/env bash
 set -euo pipefail

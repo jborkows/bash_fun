@@ -1,6 +1,6 @@
 ## Using pipe status
 ### Basics
-
+_basic.sh_
 ```bash
 #!/usr/bin/env bash
 echo hi | cat foo - | head 
@@ -18,7 +18,7 @@ hi
 0 1 0
 ```
 ### Seeing exit codes
-
+_morefun.sh_
 ```bash
 #!/usr/bin/env bash
 (exit 2) | (exit 251) | false | true

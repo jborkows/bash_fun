@@ -1,6 +1,6 @@
 ## Playing with eof
 ### Using eof
-
+_basic.sh_
 ```bash
 #!/usr/bin/env bash
 read -r -d '' my_var_name <<EOF

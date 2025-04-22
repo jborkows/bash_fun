@@ -1,6 +1,6 @@
 ## Expansions
 ### Basics
-
+_basic.sh_
 ```bash
 #!/usr/bin/env bash
 filename=my-file
@@ -13,7 +13,7 @@ bash basic.sh
 my-file.txt my-file.sh my-file.png
 ```
 ### Into array
-
+_array.sh_
 ```bash
 #!/usr/bin/env bash
 filename=my-file
@@ -29,7 +29,7 @@ bash array.sh
 my-file.txt:my-file.sh:my-file.png
 ```
 ### Complex array
-
+_complex_array.sh_
 ```bash
 #!/usr/bin/env bash
 filename=my-file

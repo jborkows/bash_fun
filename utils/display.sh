@@ -50,7 +50,11 @@ function subTitle() {
 }
 
 function displayFile() {
-	echo ""
+	if markdownOn; then
+		echo "_$1_" 
+	else
+		echo "file $1"
+	fi
 	bashPrefix
 	cat "$1"  
 	displayBlock
