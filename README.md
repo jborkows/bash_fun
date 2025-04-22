@@ -1,5 +1,27 @@
 # Sources:
 - [ysap](https://www.youtube.com/watch?v=KwRow9DdFJ0)
+# Tips:
+## Privilege escalation
+```bash
+sudo echo "aaa" > /etc/hostname
+```
+will not work, echo was run as root, but the redirection is run as the user.
+
+### Possible solution:
+```bash
+echo "aaa" | sudo tee /etc/hostname > /dev/null
+```
+## Alternate screen
+Like less opens a window which dissappears. See
+```bash
+tput smcup; env ; sleep 3;tput rmcup
+```
+It will show env for 3 seconds and then go back to original content.
+or
+```bash
+tput smcup; cat README.md ;read -n 1 -s ;tput rmcup
+```
+
 # Sections
 - [ Playing with arrays](./sections/arrays.md)
 - [ Working with input arguments expansion](./sections/basharguments.md)
@@ -14,7 +36,9 @@
 - [ Mapfile](./sections/mapfile_usage.md)
 - [ Playing with parameter expansion](./sections/parameters_expansion.md)
 - [ Reading and parsing files](./sections/parsingline.md)
+- [ Using pipe status](./sections/pipe_status.md)
 - [ Reading files in different ways](./sections/read_file.md)
 - [ Parsing names using regex](./sections/regexpparsing.md)
+- [ Substrings](./sections/substrings.md)
 - [ Playing with eof](./sections/using_eof.md)
 - [ Using proc to read environment variables](./sections/using_proc_for_environment.md)

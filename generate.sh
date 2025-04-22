@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
 
 export MARKDOWN_ON=true
 
@@ -24,7 +23,7 @@ for dir in */; do
 	    echo "Running $SUMMARY_SCRIPT in $dir..."
 	    (
 	    cd "$dir"
-	    bash $SUMMARY_SCRIPT > "$OUTPUT_FILE"
+	    bash $SUMMARY_SCRIPT > "$OUTPUT_FILE" 
 	    ) &
 	    tasks+=("$!")
 
@@ -36,7 +35,7 @@ for dir in */; do
 	    echo "Running $SUMMARY_SCRIPT in $dir..."
 	    (
 	    cd "$dir"
-	    bash $SUMMARY_SCRIPT > "$OUTPUT_FILE"
+	    bash $SUMMARY_SCRIPT > "$OUTPUT_FILE" 
 	    ) &
 	    tasks+=("$!")
 
@@ -46,12 +45,37 @@ for dir in */; do
     echo "Skipping $dir (no summary.sh nor summary.bashx found)"
 done
 
+echo "Waiting for tasks to finish..."
 wait "${tasks[@]}"
-cat <<EOF > "$SCRIPT_DIR/README.md"
+echo "All tasks completed."
+cat <<"EOF" > "$SCRIPT_DIR/README.md"
 # Sources:
 - [ysap](https://www.youtube.com/watch?v=KwRow9DdFJ0)
+# Tips:
+## Privilege escalation
+```bash
+sudo echo "aaa" > /etc/hostname
+```
+will not work, echo was run as root, but the redirection is run as the user.
+
+### Possible solution:
+```bash
+echo "aaa" | sudo tee /etc/hostname > /dev/null
+```
+## Alternate screen
+Like less opens a window which dissappears. See
+```bash
+tput smcup; env ; sleep 3;tput rmcup
+```
+It will show env for 3 seconds and then go back to original content.
+or
+```bash
+tput smcup; cat README.md ;read -n 1 -s ;tput rmcup
+```
+
 # Sections
 EOF
+echo "Geenerating sections..."
 for mdFile in ${SCRIPT_DIR}/sections/*.md; do
 	head -1 "$mdFile" 
 	title=$(head -1 "$mdFile") 	
