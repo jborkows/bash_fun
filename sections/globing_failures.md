@@ -1,4 +1,4 @@
-## Plaaying with return parameter
+## Warning with globing
 ### Failure...
 failure.sh
 ```bash
@@ -16,7 +16,7 @@ echo "Number of files: $i"
 bash failure.sh
 ```
 ```
-File: /tmp/tmp.BEUQfaaWIr/*
+File: /tmp/tmp.GxqiTiTHI3/*
 Number of files: 1
 ```
 ### Fixed...

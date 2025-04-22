@@ -7,7 +7,7 @@
 -[ Playing with tty](./sections/checking_the_kind_of_output.md)<br>
 -[ Counting and showing execution of external commands](./sections/counting_commands.md)<br>
 -[ Using () and {} in function definition](./sections/function_definition.md)<br>
--[ Plaaying with return parameter](./sections/globing_failures.md)<br>
+-[ Warning with globing](./sections/globing_failures.md)<br>
 -[ Plaaying with return parameter](./sections/local_return_status.md)<br>
 -[ Playing with ls](./sections/lsfun.md)<br>
 -[ Playing with parameter expansion](./sections/parameters_expansion.md)<br>
