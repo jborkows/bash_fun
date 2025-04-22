@@ -56,6 +56,6 @@ for mdFile in ${SCRIPT_DIR}/sections/*.md; do
 	head -1 "$mdFile" 
 	title=$(head -1 "$mdFile") 	
 	removedNotation=${title##*#}
-	removedNotation=${removedNotation# }
+	removedNotation=${removedNotation:0}
 	echo "- [$removedNotation](./sections/${mdFile##*/})" >> "$SCRIPT_DIR/README.md"
 done;
