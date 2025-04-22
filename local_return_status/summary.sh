@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 source ../utils/display.sh
-stepTitle Plaaying with return parameter
+stepTitle Playing with return parameter
 subTitle Example
 displayFile example.sh
 evalFunction "bash example.sh"

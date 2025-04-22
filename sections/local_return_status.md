@@ -1,4 +1,4 @@
-## Plaaying with return parameter
+## Playing with return parameter
 ### Example
 example.sh
 ```bash

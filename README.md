@@ -8,7 +8,7 @@
 - [Counting and showing execution of external commands](./sections/counting_commands.md)
 - [Using () and {} in function definition](./sections/function_definition.md)
 - [Warning with globing](./sections/globing_failures.md)
-- [Plaaying with return parameter](./sections/local_return_status.md)
+- [Playing with return parameter](./sections/local_return_status.md)
 - [Playing with ls](./sections/lsfun.md)
 - [Mapfile](./sections/mapfile_usage.md)
 - [Playing with parameter expansion](./sections/parameters_expansion.md)
