@@ -10,3 +10,4 @@ echo or with \*
 for name in "${names[*]}"; do
     echo "Name: $name"
 done
+

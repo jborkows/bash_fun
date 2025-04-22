@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 source ../utils/display.sh
-set +x
 
 stepTitle Playing with eof
 
