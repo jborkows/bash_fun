@@ -48,14 +48,16 @@ for mdFile in ${SCRIPT_DIR}/sections/*.md; do
 	head -1 "$mdFile" 
 	title=$(head -1 "$mdFile") 	
 	removedNotation=${title##*#}
-	outputs+=("-[$removedNotation](./sections/${mdFile##*/})<br>")
+	removedNotation=${removedNotation# }
+	outputs+=("- [$removedNotation](./sections/${mdFile##*/})")
 done;
 
 IFS=$'\n' 
+ouputtext="${outputs[*]}"
+IFS=
 cat <<EOF > "$SCRIPT_DIR/README.md"
 # Sources:
 - [ysap](https://www.youtube.com/watch?v=KwRow9DdFJ0)
 # Sections
-${outputs[*]}
+$ouputtext
 EOF
-IFS=
