@@ -1,7 +1,10 @@
 source ../utils/display.sh
 stepTitle Reading files in different ways
 
+subTitle example.txt
 displayFile example.txt
+
+subTitle slow_read.sh
 displayFile slow_read.sh
 
 subTitle everything in memory then process

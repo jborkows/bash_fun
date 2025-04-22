@@ -1,10 +1,12 @@
 ## Reading files in different ways
+### example.txt
 
 ```bash
 First line
 Second line
 Third line
 ```
+### slow_read.sh
 
 ```bash
 #!/usr/bin/env bash
@@ -27,9 +29,9 @@ done
 bash reading_all_at_once.sh
 ```
 ```
-21:42:47 First line
-21:42:47 Second line
-21:42:47 Third line
+21:44:02 First line
+21:44:02 Second line
+21:44:02 Third line
 ```
 ### line by line
 
@@ -46,9 +48,9 @@ done < <(bash slow_read.sh example.txt)
 bash reading_line_by_line.sh
 ```
 ```
-21:42:48 First line
-21:42:49 Second line
-21:42:50 Third line
+21:44:03 First line
+21:44:04 Second line
+21:44:05 Third line
 ```
 ### line by line - without slow
 
@@ -70,11 +72,11 @@ done < example.txt
 bash reading_line_by_line_normal.sh
 ```
 ```
-21:42:50 First line
-21:42:50 Second line
-21:42:50 Third line
+21:44:05 First line
+21:44:05 Second line
+21:44:05 Third line
 or
-21:42:50 First line
-21:42:50 Second line
-21:42:50 Third line
+21:44:05 First line
+21:44:05 Second line
+21:44:05 Third line
 ```

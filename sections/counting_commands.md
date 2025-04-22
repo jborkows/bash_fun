@@ -11,14 +11,14 @@
 (cd ../parsingline; strace -f -e trace=execve bash multiplesubshell.sh 2>&1 | grep execve  )
 ```
 ```
-execve("/usr/bin/bash", ["bash", "multiplesubshell.sh"], 0x7ffc58173150 /* 93 vars */) = 0
-[pid 676797] execve("/usr/bin/cut", ["cut", "-d", ":", "-f1"], 0x61ad330da380 /* 93 vars */) = 0
-[pid 676800] execve("/usr/bin/cut", ["cut", "-d", ":", "-f2"], 0x61ad330da380 /* 93 vars */) = 0
-[pid 676803] execve("/usr/bin/cut", ["cut", "-d", ":", "-f", "3-"], 0x61ad330da380 /* 93 vars */) = 0
-[pid 676806] execve("/usr/bin/cut", ["cut", "-d", ":", "-f1"], 0x61ad330da380 /* 93 vars */) = 0
-[pid 676809] execve("/usr/bin/cut", ["cut", "-d", ":", "-f2"], 0x61ad330da380 /* 93 vars */) = 0
-[pid 676812] execve("/usr/bin/cut", ["cut", "-d", ":", "-f", "3-"], 0x61ad330da380 /* 93 vars */) = 0
-[pid 676815] execve("/usr/bin/cut", ["cut", "-d", ":", "-f1"], 0x61ad330da380 /* 93 vars */) = 0
-[pid 676818] execve("/usr/bin/cut", ["cut", "-d", ":", "-f2"], 0x61ad330da380 /* 93 vars */) = 0
-[pid 676821] execve("/usr/bin/cut", ["cut", "-d", ":", "-f", "3-"], 0x61ad330da380 /* 93 vars */) = 0
+execve("/usr/bin/bash", ["bash", "multiplesubshell.sh"], 0x7ffdcf0f1440 /* 93 vars */) = 0
+[pid 678081] execve("/usr/bin/cut", ["cut", "-d", ":", "-f1"], 0x5ff9eb2cd380 /* 93 vars */) = 0
+[pid 678084] execve("/usr/bin/cut", ["cut", "-d", ":", "-f2"], 0x5ff9eb2cd380 /* 93 vars */) = 0
+[pid 678087] execve("/usr/bin/cut", ["cut", "-d", ":", "-f", "3-"], 0x5ff9eb2cd380 /* 93 vars */) = 0
+[pid 678090] execve("/usr/bin/cut", ["cut", "-d", ":", "-f1"], 0x5ff9eb2cd380 /* 93 vars */) = 0
+[pid 678093] execve("/usr/bin/cut", ["cut", "-d", ":", "-f2"], 0x5ff9eb2cd380 /* 93 vars */) = 0
+[pid 678096] execve("/usr/bin/cut", ["cut", "-d", ":", "-f", "3-"], 0x5ff9eb2cd380 /* 93 vars */) = 0
+[pid 678099] execve("/usr/bin/cut", ["cut", "-d", ":", "-f1"], 0x5ff9eb2cd380 /* 93 vars */) = 0
+[pid 678102] execve("/usr/bin/cut", ["cut", "-d", ":", "-f2"], 0x5ff9eb2cd380 /* 93 vars */) = 0
+[pid 678105] execve("/usr/bin/cut", ["cut", "-d", ":", "-f", "3-"], 0x5ff9eb2cd380 /* 93 vars */) = 0
 ```
