@@ -2,10 +2,13 @@ source ../utils/display.sh
 stepTitle Working with input arguments expansion
 
 subTitle Naive expansion 
-showAndRunFile first.sh
+displayFile first.sh
+evalFunction "bash first.sh foo 'bar zoo' 'ooo  xxx'"
 
 subTitle Naive expansion - adding quotas
-showAndRunFile first_all_in_quota.sh
+displayFile first_all_in_quota.sh
+evalFunction "bash first_all_in_quota.sh foo 'bar zoo' 'ooo  xxx'"
 
 subTitle Fixed
-showAndRunFile fixed.sh
+displayFile fixed.sh
+evalFunction "bash fixed.sh foo 'bar zoo' 'ooo  xxx'"
