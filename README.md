@@ -28,6 +28,7 @@ tput smcup; cat README.md ;read -n 1 -s ;tput rmcup
 - [ Some info for working with commands to check if they are built-in or external](./sections/checking_commands.md)
 - [ Playing with tty](./sections/checking_the_kind_of_output.md)
 - [ Counting and showing execution of external commands](./sections/counting_commands.md)
+- [ cstyleloops](./sections/cstyleloops.md)
 - [ Expansions](./sections/expansions.md)
 - [ Using () and {} in function definition](./sections/function_definition.md)
 - [ Warning with globing](./sections/globing_failures.md)
