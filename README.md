@@ -31,6 +31,7 @@ tput smcup; cat README.md ;read -n 1 -s ;tput rmcup
 - [ Counting and showing execution of external commands](./sections/counting_commands.md)
 - [ cstyleloops](./sections/cstyleloops.md)
 - [ Expansions](./sections/expansions.md)
+- [ Extended Globbing](./sections/extended_globbing.md)
 - [ Using () and {} in function definition](./sections/function_definition.md)
 - [ Warning with globing](./sections/globing_failures.md)
 - [ Playing with return parameter](./sections/local_return_status.md)
