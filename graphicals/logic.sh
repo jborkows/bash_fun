@@ -3,6 +3,11 @@ source graphics.sh
 
 LOGIC_EXECUTED=0
 function logic_before_loop(){
+	move_cursor 10 10
+	echo "This is a test"
+	sleep 2
+	move_screen_cursor_to_center
+	clear_line_at 10
 	SCREEN_SIZE=()
 	populate_screen_size_into SCREEN_SIZE
 	echo "Screen size: ${SCREEN_SIZE[0]} x ${SCREEN_SIZE[1]}"

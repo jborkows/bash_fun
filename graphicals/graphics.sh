@@ -71,8 +71,21 @@ function _graphics_exit_alternate_screen() {
 	echo -n "$ESC[?1049l"   # Return to main screen
 }
 
+CURRENT_ROW=0
+CURRENT_COL=0
 function move_cursor() {
 	local row=$1
 	local col=$2
 	echo -n "$ESC[$row;${col}H"
+	CURRENT_ROW=$row
+	CURRENT_COL=$col
+}
+
+function clear_line_at() {
+	BACKUP_ROW=$CURRENT_ROW
+	BACKUP_COL=$CURRENT_COL
+	local row=$1
+	move_cursor "$row" 1       # Move to column 1 of target row
+	echo -ne "${ESC}[2K"       # Clear the line
+	move_cursor "$BACKUP_ROW" "$BACKUP_COL" # Move back to original position
 }
