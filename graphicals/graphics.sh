@@ -90,6 +90,23 @@ function clear_line_at() {
 	move_cursor "$BACKUP_ROW" "$BACKUP_COL" # Move back to original position
 }
 
+
+# overwrites the text at the given position with spaces without moving the cursor
+function clear_text_at(){
+	BACKUP_ROW=$CURRENT_ROW
+	BACKUP_COL=$CURRENT_COL
+	local row=$1
+	local col=$2
+	local count=$3
+
+	move_cursor "$row" "$col"
+	for ((i = 0; i < count; i++)); do
+		echo -n " "
+	done
+	move_cursor "$BACKUP_ROW" "$BACKUP_COL" # Move back to original position
+}
+
+# removes characters at the given position and moves the cursor back
 function delete_chars_at() {
 	BACKUP_ROW=$CURRENT_ROW
 	BACKUP_COL=$CURRENT_COL
