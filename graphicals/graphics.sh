@@ -15,7 +15,13 @@ function start_screen(){
 
 	cols=$COLUMNS
 	lines=$LINES
-	echo columns $cols lines $lines
+}
+
+function populate_screen_size_into(){
+	local -n result=$1
+	local cols=$COLUMNS
+	local lines=$LINES
+	result=($cols $lines)
 }
 
 function initialize_screen_position(){
@@ -45,6 +51,10 @@ function debug_lines_position(){
 		done
 	done
 	
+}
+
+function clear_screen(){
+	tput clear # Reset terminal
 }
 
 function cleanup_screen(){

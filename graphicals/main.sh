@@ -19,6 +19,7 @@ function main(){
 	read_keyboard_events_task <&0 &
 	initialize_screen_position
 	debug_lines_position
+	logic_before_loop
 	read_event_loop logic
 }
 main
