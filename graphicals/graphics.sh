@@ -89,3 +89,15 @@ function clear_line_at() {
 	echo -ne "${ESC}[2K"       # Clear the line
 	move_cursor "$BACKUP_ROW" "$BACKUP_COL" # Move back to original position
 }
+
+function delete_chars_at() {
+	BACKUP_ROW=$CURRENT_ROW
+	BACKUP_COL=$CURRENT_COL
+	local row=$1
+	local col=$2
+	local count=$3
+
+	move_cursor "$row" "$col"
+	echo -ne "${ESC}[${count}P"
+	move_cursor "$BACKUP_ROW" "$BACKUP_COL" # Move back to original position
+}
