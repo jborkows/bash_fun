@@ -44,5 +44,6 @@ tput smcup; cat README.md ;read -n 1 -s ;tput rmcup
 - [ Reading files in different ways](./sections/read_file.md)
 - [ Parsing names using regex](./sections/regexpparsing.md)
 - [ Substrings](./sections/substrings.md)
+- [ glob star](./sections/twoasterix.md)
 - [ Playing with eof](./sections/using_eof.md)
 - [ Using proc to read environment variables](./sections/using_proc_for_environment.md)

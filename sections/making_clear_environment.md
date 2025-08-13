@@ -15,7 +15,7 @@ echo "How many are there in clear env with added stuff $(env - FOO=hi BAR=aa bas
 bash basic.sh
 ```
 ```
-How many are there 93
+How many are there 77
 How many are there in clear env 3
 How many are there in clear env with added stuff 5
 ```
