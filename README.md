@@ -45,6 +45,7 @@ tput smcup; cat README.md ;read -n 1 -s ;tput rmcup
 - [ Parsing names using regex](./sections/regexpparsing.md)
 - [ Strict Bash Fail](./sections/Strict_Bash_Fail.md)
 - [ Substrings](./sections/substrings.md)
+- [ Traps](./sections/traps.md)
 - [ glob star](./sections/twoasterix.md)
 - [ Playing with eof](./sections/using_eof.md)
 - [ Using proc to read environment variables](./sections/using_proc_for_environment.md)
