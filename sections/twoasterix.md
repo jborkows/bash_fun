@@ -40,6 +40,9 @@ _third.sh_
 shopt -s globstar
 
 printf '%s\n' **
+
+afiles=( **/*.file )
+echo "There are ${#afiles[@]} *.file"
 ```
 ```bash
 bash third.sh
@@ -55,4 +58,5 @@ one/two/three/third.file
 second.sh
 summary.sh
 third.sh
+There are 3 *.file
 ```

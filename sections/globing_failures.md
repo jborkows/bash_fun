@@ -16,7 +16,7 @@ echo "Number of files: $i"
 bash failure.sh
 ```
 ```
-File: /tmp/tmp.4iequeIx0W/*
+File: /tmp/tmp.flW3y0btXo/*
 Number of files: 1
 ```
 ### Fixed...
