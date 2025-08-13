@@ -2,7 +2,3 @@
 shopt -s globstar
 
 printf '%s\n' **
-
-
-
-

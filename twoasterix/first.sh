@@ -4,7 +4,4 @@ touch one/two/three/third.file
 touch one/two/second.file
 touch one/first.file
 
-
-
-
-
+echo "Prepared"

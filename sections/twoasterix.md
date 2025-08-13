@@ -8,15 +8,13 @@ touch one/two/three/third.file
 touch one/two/second.file
 touch one/first.file
 
-
-
-
-
+echo "Prepared"
 ```
 ```bash
 bash first.sh
 ```
 ```
+Prepared
 ```
 ### Without globstar
 _second.sh_
@@ -24,7 +22,6 @@ _second.sh_
 #!/usr/bin/env bash
 
 printf '%s\n' **
-
 ```
 ```bash
 bash second.sh
@@ -43,10 +40,6 @@ _third.sh_
 shopt -s globstar
 
 printf '%s\n' **
-
-
-
-
 ```
 ```bash
 bash third.sh

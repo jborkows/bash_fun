@@ -8,6 +8,5 @@ showAndRunFile first.sh
 subTitle Without globstar
 showAndRunFile second.sh
 
-
 subTitle With globstar
 showAndRunFile third.sh
