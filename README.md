@@ -43,6 +43,7 @@ tput smcup; cat README.md ;read -n 1 -s ;tput rmcup
 - [ Using pipe status](./sections/pipe_status.md)
 - [ Reading files in different ways](./sections/read_file.md)
 - [ Parsing names using regex](./sections/regexpparsing.md)
+- [ Strict Bash Fail](./sections/Strict_Bash_Fail.md)
 - [ Substrings](./sections/substrings.md)
 - [ glob star](./sections/twoasterix.md)
 - [ Playing with eof](./sections/using_eof.md)

@@ -27,9 +27,9 @@ done
 bash reading_all_at_once.sh
 ```
 ```
-22:17:57 First line
-22:17:57 Second line
-22:17:57 Third line
+23:52:40 First line
+23:52:40 Second line
+23:52:40 Third line
 ```
 ### line by line
 _reading_line_by_line.sh_
@@ -46,9 +46,9 @@ done < <(bash slow_read.sh example.txt)
 bash reading_line_by_line.sh
 ```
 ```
-22:17:58 First line
-22:17:59 Second line
-22:18:00 Third line
+23:52:41 First line
+23:52:42 Second line
+23:52:43 Third line
 ```
 ### line by line - without slow
 _reading_line_by_line_normal.sh_
@@ -70,11 +70,11 @@ done < example.txt
 bash reading_line_by_line_normal.sh
 ```
 ```
-22:18:00 First line
-22:18:00 Second line
-22:18:00 Third line
+23:52:43 First line
+23:52:43 Second line
+23:52:43 Third line
 or
-22:18:00 First line
-22:18:00 Second line
-22:18:00 Third line
+23:52:43 First line
+23:52:43 Second line
+23:52:43 Third line
 ```
