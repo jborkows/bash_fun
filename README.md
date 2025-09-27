@@ -35,6 +35,7 @@ tput smcup; cat README.md ;read -n 1 -s ;tput rmcup
 - [ Using () and {} in function definition](./sections/function_definition.md)
 - [ Warning with globing](./sections/globing_failures.md)
 - [ heredoc](./sections/heredoc.md)
+- [ Playing with inodes](./sections/inodes.md)
 - [ Playing with return parameter](./sections/local_return_status.md)
 - [ Playing with ls](./sections/lsfun.md)
 - [ Making clear environment](./sections/making_clear_environment.md)
