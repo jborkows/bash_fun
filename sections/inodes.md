@@ -30,12 +30,12 @@ INDEX=0 bash show_stats.sh
 ```
   File: /tmp/aaa_stat_fun
   Size: 0         	Blocks: 0          IO Block: 4096   regular empty file
-Device: 252,1	Inode: 13107946    Links: 1
+Device: 252,1	Inode: 13107764    Links: 1
 Access: (0664/-rw-rw-r--)  Uid: ( 1000/jborkows)   Gid: ( 1001/jborkows)
-Access: 2025-09-27 10:55:53.290678583 +0200
-Modify: 2025-09-27 10:55:53.290678583 +0200
-Change: 2025-09-27 10:55:53.290678583 +0200
- Birth: 2025-09-27 10:55:53.290678583 +0200
+Access: 2026-06-26 23:23:16.896111816 +0200
+Modify: 2026-06-26 23:23:16.896111816 +0200
+Change: 2026-06-26 23:23:16.896111816 +0200
+ Birth: 2026-06-26 23:23:16.896111816 +0200
 ```
 ## Chmod is changing inode
 _use_chmod.sh_
@@ -54,12 +54,12 @@ INDEX=1 bash show_stats.sh
 ```
   File: /tmp/aaa_stat_fun
   Size: 0         	Blocks: 0          IO Block: 4096   regular empty file
-Device: 252,1	Inode: 13107946    Links: 1
+Device: 252,1	Inode: 13107764    Links: 1
 Access: (0624/-rw--w-r--)  Uid: ( 1000/jborkows)   Gid: ( 1001/jborkows)
-Access: 2025-09-27 10:55:53.290678583 +0200
-Modify: 2025-09-27 10:55:53.290678583 +0200
-Change: 2025-09-27 10:55:54.302666348 +0200
- Birth: 2025-09-27 10:55:53.290678583 +0200
+Access: 2026-06-26 23:23:16.896111816 +0200
+Modify: 2026-06-26 23:23:16.896111816 +0200
+Change: 2026-06-26 23:23:17.908101105 +0200
+ Birth: 2026-06-26 23:23:16.896111816 +0200
 ```
 ```bash
 FIRST_STATS=0  SECOND_STATS=1 bash show_diff_between_stats.sh
@@ -70,9 +70,9 @@ FIRST_STATS=0  SECOND_STATS=1 bash show_diff_between_stats.sh
 ---
 > Access: (0624/-rw--w-r--)  Uid: ( 1000/jborkows)   Gid: ( 1001/jborkows)
 7c7
-< Change: 2025-09-27 10:55:53.290678583 +0200
+< Change: 2026-06-26 23:23:16.896111816 +0200
 ---
-> Change: 2025-09-27 10:55:54.302666348 +0200
+> Change: 2026-06-26 23:23:17.908101105 +0200
 ```
 ## Changing content chaning both content (modify) and inode (change)
 _replace_content.sh_
@@ -91,12 +91,12 @@ INDEX=2 bash show_stats.sh
 ```
   File: /tmp/aaa_stat_fun
   Size: 5         	Blocks: 8          IO Block: 4096   regular file
-Device: 252,1	Inode: 13107946    Links: 1
+Device: 252,1	Inode: 13107764    Links: 1
 Access: (0624/-rw--w-r--)  Uid: ( 1000/jborkows)   Gid: ( 1001/jborkows)
-Access: 2025-09-27 10:55:53.290678583 +0200
-Modify: 2025-09-27 10:55:55.321295801 +0200
-Change: 2025-09-27 10:55:55.321295801 +0200
- Birth: 2025-09-27 10:55:53.290678583 +0200
+Access: 2026-06-26 23:23:16.896111816 +0200
+Modify: 2026-06-26 23:23:18.924373319 +0200
+Change: 2026-06-26 23:23:18.924373319 +0200
+ Birth: 2026-06-26 23:23:16.896111816 +0200
 ```
 ```bash
 FIRST_STATS=1  SECOND_STATS=2 bash show_diff_between_stats.sh
@@ -107,11 +107,11 @@ FIRST_STATS=1  SECOND_STATS=2 bash show_diff_between_stats.sh
 ---
 >   Size: 5         	Blocks: 8          IO Block: 4096   regular file
 6,7c6,7
-< Modify: 2025-09-27 10:55:53.290678583 +0200
-< Change: 2025-09-27 10:55:54.302666348 +0200
+< Modify: 2026-06-26 23:23:16.896111816 +0200
+< Change: 2026-06-26 23:23:17.908101105 +0200
 ---
-> Modify: 2025-09-27 10:55:55.321295801 +0200
-> Change: 2025-09-27 10:55:55.321295801 +0200
+> Modify: 2026-06-26 23:23:18.924373319 +0200
+> Change: 2026-06-26 23:23:18.924373319 +0200
 ```
 ## Directory with subdirectory has at least two links .. and .
 _directory_links.sh_
@@ -149,7 +149,7 @@ bash inodes_for_links.sh
 ```
 ```
 total 0
-13110688 -rw-rw-r-- 2 jborkows jborkows  0 wrz 27 10:55 hardlink.txt
-13110688 -rw-rw-r-- 2 jborkows jborkows  0 wrz 27 10:55 original.txt
-13110729 lrwxrwxrwx 1 jborkows jborkows 12 wrz 27 10:55 soft_link.txt -> original.txt
+13111788 -rw-rw-r-- 2 jborkows jborkows  0 cze 26 23:23 hardlink.txt
+13111788 -rw-rw-r-- 2 jborkows jborkows  0 cze 26 23:23 original.txt
+13111792 lrwxrwxrwx 1 jborkows jborkows 12 cze 26 23:23 soft_link.txt -> original.txt
 ```

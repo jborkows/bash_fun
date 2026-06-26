@@ -5,10 +5,10 @@ ls -l ./files
 ```
 ```
 total 0
--rw-rw-r-- 1 jborkows jborkows 0 sie 13 20:11 a
--rw-rw-r-- 1 jborkows jborkows 0 sie 13 20:11 b
--rw-rw-r-- 1 jborkows jborkows 0 sie 13 20:11 c
--rw-rw-r-- 1 jborkows jborkows 0 sie 13 20:11 d      e
+-rw-rw-r-- 1 jborkows jborkows 0 sie 13  2025 a
+-rw-rw-r-- 1 jborkows jborkows 0 sie 13  2025 b
+-rw-rw-r-- 1 jborkows jborkows 0 sie 13  2025 c
+-rw-rw-r-- 1 jborkows jborkows 0 sie 13  2025 d      e
 ```
 ### script ls into for loop (uses spaces as separator)
 _first.sh_
